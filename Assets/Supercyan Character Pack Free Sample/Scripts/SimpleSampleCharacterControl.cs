@@ -21,7 +21,7 @@ public class SimpleSampleCharacterControl : MonoBehaviour
     [SerializeField] private float m_turnSpeed = 200;
     [SerializeField] private float m_jumpForce = 4;
 
-    [SerializeField] private Animator m_animator = null;
+    //[SerializeField] private Animator m_animator = null;
     [SerializeField] private Rigidbody m_rigidBody = null;
 
     [SerializeField] private ControlMode m_controlMode = ControlMode.Direct;
@@ -47,8 +47,8 @@ public class SimpleSampleCharacterControl : MonoBehaviour
 
     private void Awake()
     {
-        if (!m_animator) { gameObject.GetComponent<Animator>(); }
-        if (!m_rigidBody) { gameObject.GetComponent<Animator>(); }
+        //if (!m_animator) { gameObject.GetComponent<Animator>(); }
+        //if (!m_rigidBody) { gameObject.GetComponent<Animator>(); }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -116,7 +116,7 @@ public class SimpleSampleCharacterControl : MonoBehaviour
 
     private void FixedUpdate()
     {
-        m_animator.SetBool("Grounded", m_isGrounded);
+        //m_animator.SetBool("Grounded", m_isGrounded);
 
         switch (m_controlMode)
         {
@@ -161,7 +161,7 @@ public class SimpleSampleCharacterControl : MonoBehaviour
         transform.position += transform.forward * m_currentV * m_moveSpeed * Time.deltaTime;
         transform.Rotate(0, m_currentH * m_turnSpeed * Time.deltaTime, 0);
 
-        m_animator.SetFloat("MoveSpeed", m_currentV);
+        //m_animator.SetFloat("MoveSpeed", m_currentV);
 
         JumpingAndLanding();
     }
@@ -195,7 +195,7 @@ public class SimpleSampleCharacterControl : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(m_currentDirection);
             transform.position += m_currentDirection * m_moveSpeed * Time.deltaTime;
 
-            m_animator.SetFloat("MoveSpeed", direction.magnitude);
+            //m_animator.SetFloat("MoveSpeed", direction.magnitude);
         }
 
         JumpingAndLanding();
@@ -213,12 +213,12 @@ public class SimpleSampleCharacterControl : MonoBehaviour
 
         if (!m_wasGrounded && m_isGrounded)
         {
-            m_animator.SetTrigger("Land");
+            //m_animator.SetTrigger("Land");
         }
 
         if (!m_isGrounded && m_wasGrounded)
         {
-            m_animator.SetTrigger("Jump");
+           // m_animator.SetTrigger("Jump");
         }
     }
 }

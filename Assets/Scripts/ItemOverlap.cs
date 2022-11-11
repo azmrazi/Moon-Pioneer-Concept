@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ItemOverlap : MonoBehaviour
 {
 
     bool isAlreadyCollected = false;
-    void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if (isAlreadyCollected) return;
 

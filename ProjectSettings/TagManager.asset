@@ -5,6 +5,28 @@ TagManager:
   serializedVersion: 2
   tags:
   - Prod_1
+  - Storage
+  - Storage_1
+  - Producer_2
+  - Storage_2
+  - Factory_2
+  - Factory_3
+  - Producer_3
+  - Storage_3
+  - Prod_1 Mover
+  - Factory_1
+  - Prod_2
+  - Prod_3
+  - Prod_Mover_1.5
+  - Prod_Mover2
+  - Prod_Mover2.5
+  - Prod_Mover2.5(1)
+  - Prod_Mover3
+  - Message
+  - Message_1
+  - Message_2
+  - Message_3
+  - Message_4
   layers:
   - Default
   - TransparentFX
